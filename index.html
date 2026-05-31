@@ -139,7 +139,7 @@
               { id: "o26_50", type: "tf", text: "再利用型カテーテルでは、カテーテルと保存用ケースがセットになっており、ケースの消毒液は導尿時に毎回交換する。", answer: false, explanation: "消毒液は1日1回交換する。" },
               { id: "o26_51", type: "tf", text: "令和2年診療報酬改定により、特殊カテーテル加算は、親水性コーティングを有するものは1700点・1900点・2100点と、本数にあわせて3段階の点数を算定できるようになった。", answer: true },
               { id: "o26_52", type: "tf", text: "各カテーテルのコストシミュレーションにより、施設の差益を考えると、単価の高い親水性カテーテルを使うことで施設の差益は減る。", answer: false, explanation: "施設の差益は収入と支出の差を考えるため、親水性カテーテルを使うことで必ずしも減るとはいえない。" },
-              { id: "o26_53", type: "tf", text: "再利用型カテーテルと親水性カテーথের併用メソッド提案は、例としては、1日の導尿回数が多い方、外出時に導尿を行う方、などに提案を行う。", answer: true },
+              { id: "o26_53", type: "tf", text: "再利用型カテーテルと親水性カテーテルの併用メソッド提案は、例としては、1日の導尿回数が多い方、外出時に導尿を行う方、などに提案を行う。", answer: true },
               { id: "o26_54", type: "tf", text: "サルコペニアは「筋肉」の「減少」を意味するギリシア語が語源となっており、加齢以外にも様々な原因で発症する事が示されている。", answer: true },
               { id: "o26_55", type: "tf", text: "がん患者の場合、CTで第3腰椎部(L3)の筋肉の面積を計測して、身長の2乗で補正し、SMI(骨格筋指数)を算出している研究が多い。", answer: true },
               { id: "o26_56", type: "tf", text: "東大病院の消化器がん・泌尿器がん患者の研究では、Fujiwara基準に基づくサルコペニアの有病率は17.8%であり、他の診断基準を使うよりも予後の予測能力が高い事が示された。", answer: true },
@@ -871,11 +871,9 @@
       const startStudy = (questions, title) => {
         if (!questions?.length) return showToast("問題がありません。", "error");
         
-        // findIndex が見つからない場合は 0 とする。
         let initialIndex = questions.findIndex(q => userProgress.completed[q.id] === undefined);
         if (initialIndex === -1) initialIndex = 0;
         
-        // 常に「10問ブロックの最初」から表示する。
         const blockStart = Math.floor(initialIndex / 10) * 10;
         
         setStudySession({ 
@@ -897,7 +895,6 @@
         const updated = { ...userProgress, completed: { ...userProgress.completed, [qId]: isCorrect } };
         setUserProgress(updated);
         saveProgress(updated);
-        // ここで blockCompleted にせず、解説表示後の「次へ」ボタン押下時に判定する
         setStudySession({ ...studySession, blockAnswers: newBlockAnswers });
       };
 
@@ -1019,36 +1016,68 @@
                   </div>
                   
                   {studySession.totalFinished ? (
-                    <div className="bg-white rounded-2xl p-8 text-center flex-grow flex flex-col justify-center items-center">
-                      <div className="w-20 h-20 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <div className="bg-white rounded-2xl p-8 text-center flex-grow flex flex-col items-center justify-center border border-slate-200 shadow-sm">
+                      <div className="w-20 h-20 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-4">
                         <Icon name="award" className="w-10 h-10 text-brand-500" />
                       </div>
-                      <h3 className="text-2xl font-black text-slate-800 mb-2">お疲れ様でした！</h3>
-                      <p className="text-slate-500 mb-8 font-medium">このカテゴリーのすべての問題を解き終わりました。</p>
-                      <button onClick={() => { setStudySession(null); setActiveTab("dashboard"); }} className="bg-slate-900 text-white font-bold py-4 px-8 rounded-xl shadow-xl hover:bg-slate-800 transition">
+                      <h3 className="text-2xl font-black text-slate-800 mb-2">全問完了！</h3>
+                      <p className="text-slate-500 mb-6 font-medium">このカテゴリーのすべての問題を解き終わりました。</p>
+
+                      <div className="text-4xl font-black text-brand-600 mb-2">
+                        {Object.values(studySession.blockAnswers).filter(a => a.isCorrect).length} <span className="text-2xl text-slate-400">/ {Object.keys(studySession.blockAnswers).length}</span>
+                      </div>
+                      <p className="text-slate-500 font-medium mb-8 text-sm">最後のブロックの正解数</p>
+
+                      <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 w-full max-w-md mx-auto">
+                        <button onClick={() => {
+                          const clr = { ...userProgress.completed };
+                          studySession.questions.slice(studySession.blockStartIndex, studySession.questions.length).forEach(q => delete clr[q.id]);
+                          setUserProgress({ ...userProgress, completed: clr });
+                          saveProgress({ ...userProgress, completed: clr });
+                          setStudySession({ ...studySession, currentIndex: studySession.blockStartIndex, blockAnswers: {}, blockCompleted: false, totalFinished: false });
+                        }} className="flex-1 py-3 border-2 border-slate-200 text-slate-600 font-bold rounded-xl hover:bg-slate-50 transition flex items-center justify-center">
+                          <Icon name="rotate-ccw" className="w-5 h-5 mr-1" /> やり直す
+                        </button>
+                        <button onClick={() => { setStudySession(null); setActiveTab("dashboard"); }} className="flex-1 py-3 bg-slate-900 text-white font-bold rounded-xl shadow-lg hover:bg-slate-800 transition flex items-center justify-center">
+                          ダッシュボードに戻る
+                        </button>
+                      </div>
+                    </div>
+                  ) : studySession.blockCompleted ? (
+                    <div className="bg-white rounded-2xl p-8 text-center flex-grow flex flex-col items-center justify-center border border-slate-200 shadow-sm">
+                      <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Icon name="check-circle" className="w-8 h-8 text-blue-500" />
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-800 mb-2">区切りポイント</h3>
+                      <p className="text-slate-500 text-sm mb-6">10問解き終わりました。</p>
+
+                      <div className="text-4xl font-black text-blue-600 mb-2">
+                        {Object.values(studySession.blockAnswers).filter(a => a.isCorrect).length} <span className="text-2xl text-slate-400">/ {Object.keys(studySession.blockAnswers).length}</span>
+                      </div>
+                      <p className="text-slate-500 font-medium mb-8 text-sm">正解</p>
+
+                      <div className="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-3 w-full max-w-md mx-auto">
+                        <button onClick={() => {
+                          const clr = { ...userProgress.completed };
+                          studySession.questions.slice(studySession.blockStartIndex, studySession.blockStartIndex + 10).forEach(q => delete clr[q.id]);
+                          setUserProgress({ ...userProgress, completed: clr });
+                          saveProgress({ ...userProgress, completed: clr });
+                          setStudySession({ ...studySession, currentIndex: studySession.blockStartIndex, blockAnswers: {}, blockCompleted: false });
+                        }} className="flex-1 py-3 border-2 border-slate-200 text-slate-600 font-bold rounded-xl hover:bg-slate-50 transition flex items-center justify-center">
+                          <Icon name="rotate-ccw" className="w-5 h-5 mr-1" /> やり直す
+                        </button>
+                        <button onClick={() => {
+                          const n = studySession.blockStartIndex + 10;
+                          setStudySession(n < studySession.questions.length ? { ...studySession, blockStartIndex: n, currentIndex: n, blockAnswers: {}, blockCompleted: false } : { ...studySession, totalFinished: true });
+                        }} className="flex-1 py-3 bg-brand-600 text-white font-bold rounded-xl shadow-lg hover:bg-brand-500 transition flex items-center justify-center">
+                          次の10問へ <Icon name="arrow-right" className="w-5 h-5 ml-1" />
+                        </button>
+                      </div>
+                      <button onClick={() => { setStudySession(null); setActiveTab("dashboard"); }} className="mt-6 text-sm font-bold text-slate-400 hover:text-slate-600 underline">
                         ダッシュボードに戻る
                       </button>
                     </div>
-                  ) : studySession.blockCompleted ? (
-                    <div className="bg-white rounded-2xl p-8 text-center flex-grow flex flex-col justify-center items-center shadow-sm border border-slate-200">
-                      <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <Icon name="check-circle" className="w-8 h-8 text-emerald-500" />
-                      </div>
-                      <h3 className="text-xl font-bold text-slate-800 mb-2">10問ブロック完了！</h3>
-                      <p className="text-slate-500 text-sm mb-8">お疲れ様です。少し休憩して次へ進みましょう。</p>
-                      <div className="flex space-x-4 w-full max-w-sm mx-auto">
-                        <button onClick={() => { setStudySession(null); setActiveTab("dashboard"); }} className="flex-1 py-3 bg-slate-100 text-slate-700 font-bold rounded-xl hover:bg-slate-200 transition">戻る</button>
-                        <button onClick={() => {
-                          const nextStart = studySession.currentIndex + 1;
-                          if (nextStart >= studySession.questions.length) {
-                            setStudySession({ ...studySession, totalFinished: true });
-                          } else {
-                            setStudySession({ ...studySession, currentIndex: nextStart, blockStartIndex: nextStart, blockAnswers: {}, blockCompleted: false });
-                          }
-                        }} className="flex-1 py-3 bg-brand-600 text-white font-bold rounded-xl shadow-lg hover:bg-brand-500 transition">次の10問へ</button>
-                      </div>
-                    </div>
-                  ) : currentQ ? (
+                  ) : (
                     <div className="bg-white rounded-2xl shadow-sm border border-slate-200 flex-grow flex flex-col relative overflow-hidden">
                       <div className="absolute top-0 left-0 w-full h-1 bg-slate-100">
                         <div className="h-full bg-brand-500 transition-all duration-300" style={{ width: `${((studySession.currentIndex % 10) + (currentAnswer ? 1 : 0)) / 10 * 100}%` }}></div>
@@ -1155,7 +1184,7 @@
                         </div>
                       )}
                     </div>
-                  ) : null}
+                  )}
                 </div>
               )
             )}
