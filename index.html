@@ -871,17 +871,13 @@
       const startStudy = (questions, title) => {
         if (!questions?.length) return showToast("問題がありません。", "error");
         
-        let initialIndex = questions.findIndex(q => userProgress.completed[q.id] === undefined);
-        if (initialIndex === -1) initialIndex = 0;
-        
-        const blockStart = Math.floor(initialIndex / 10) * 10;
-        
+        // 常に1問目 (最初のブロック) からスタートするように変更
         setStudySession({ 
           mode: "practice", 
           questions, 
           title, 
-          currentIndex: blockStart, 
-          blockStartIndex: blockStart, 
+          currentIndex: 0, 
+          blockStartIndex: 0, 
           blockAnswers: {}, 
           blockCompleted: false, 
           totalFinished: false 
