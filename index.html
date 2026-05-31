@@ -85,7 +85,7 @@
         id: "exam2026", title: "大項目カテゴリー1（2026年統一試験問題）", icon: "BookOpen",
         subcategories: {
           oplus: {
-            id: "oplus2026", title: "O-PLUS 公開問題", type: "sei",
+            id: "oplus2026", title: "基礎：O-PLUS 公開問題", type: "sei",
             questions: [
               { id: "o26_1", type: "tf", text: "リアルワールドデータを用いた入院患者 55,000 例の TPN 調査では、脂肪を含む静脈栄養管理が多く行われている現状が明らかになった。", answer: false, explanation: "脂肪はほとんど投与されていなかった。" },
               { id: "o26_2", type: "tf", text: "低栄養患者に対する栄養サポート実施の効果を検証したスイスのデータベース研究において、栄養サポート実施群では非実施群と比べて院内30日死亡率・再入院率が減少していた。", answer: true },
@@ -139,7 +139,7 @@
               { id: "o26_50", type: "tf", text: "再利用型カテーテルでは、カテーテルと保存用ケースがセットになっており、ケースの消毒液は導尿時に毎回交換する。", answer: false, explanation: "消毒液は1日1回交換する。" },
               { id: "o26_51", type: "tf", text: "令和2年診療報酬改定により、特殊カテーテル加算は、親水性コーティングを有するものは1700点・1900点・2100点と、本数にあわせて3段階の点数を算定できるようになった。", answer: true },
               { id: "o26_52", type: "tf", text: "各カテーテルのコストシミュレーションにより、施設の差益を考えると、単価の高い親水性カテーテルを使うことで施設の差益は減る。", answer: false, explanation: "施設の差益は収入と支出の差を考えるため、親水性カテーテルを使うことで必ずしも減るとはいえない。" },
-              { id: "o26_53", type: "tf", text: "再利用型カテーテルと親水性カテーテルの併用メソッド提案は、例としては、1日の導尿回数が多い方、外出時に導尿を行う方、などに提案を行う。", answer: true },
+              { id: "o26_53", type: "tf", text: "再利用型カテーテルと親水性カテーথের併用メソッド提案は、例としては、1日の導尿回数が多い方、外出時に導尿を行う方、などに提案を行う。", answer: true },
               { id: "o26_54", type: "tf", text: "サルコペニアは「筋肉」の「減少」を意味するギリシア語が語源となっており、加齢以外にも様々な原因で発症する事が示されている。", answer: true },
               { id: "o26_55", type: "tf", text: "がん患者の場合、CTで第3腰椎部(L3)の筋肉の面積を計測して、身長の2乗で補正し、SMI(骨格筋指数)を算出している研究が多い。", answer: true },
               { id: "o26_56", type: "tf", text: "東大病院の消化器がん・泌尿器がん患者の研究では、Fujiwara基準に基づくサルコペニアの有病率は17.8%であり、他の診断基準を使うよりも予後の予測能力が高い事が示された。", answer: true },
@@ -418,6 +418,56 @@
               { id: "pm26_60", type: "tf", text: "医療機器により生じた健康被害情報等は、情報入手後、原則1暦日以内に電子速報書システムに入力する。", answer: false, explanation: "医療機器連絡票システムに入力する。" },
               { id: "pm26_61", type: "tf", text: "医療機器の調査最優先事項は、「不具合の状況」、「健康被害の事象名」、「重篤性」、「因果関係」、「患者情報」である。", answer: true },
               { id: "pm26_62", type: "tf", text: "コンビネーション製品で苦情・要望を入手したら、情報入手後7暦日以内に苦情要望管理システムに登録し、医薬品部分による有害事象は電子速報書システムに1暦日以内に登録する。", answer: true }
+            ]
+          },
+          morningq: {
+            id: "morningq2026", title: "MorningQ問題", type: "bas",
+            questions: [
+              { id: "mq_1", type: "mc", text: "【Q058-1】A医師会と共催で自社医薬品に関連する講演会を開催します。演者であるA医師会の医師から、講演用資料として自分が執筆した医学雑誌(定価5,500円)を参加者全員に配布して欲しい旨の要請がありました。この医学雑誌を配布してもよいでしょうか。", options: ["配布できる", "配布できない"], answer: 0, explanation: "当該医学雑誌は自社医薬品に関連する講演用の資料として使用するものであり、また、自社医薬品に関する情報媒体でもあるので、購入単価に関係なく参加者全員に提供することができます。" },
+              { id: "mq_2", type: "mc", text: "【Q058-2】地域の中核病院であるA病院との共催で自社医薬品の講演会を企画しました。講演会の前にA病院の「院内研修会」が同じ会場で約1時間予定されていることがわかりました。「院内研修会」を含めた会場費を負担してもよいでしょうか。", options: ["負担できる", "負担できない"], answer: 1, explanation: "院内研修会に関わる費用は病院側が負担すべきものであり、メーカーが負担すると不当な景品類の提供にあたるおそれがあるため、負担できません。" },
+              { id: "mq_3", type: "mc", text: "【Q058-3】自社医薬品のWeb講演会（発信会場:ホテル）の受信会場は全国47会場で、20時開始予定です。これに先立ち、19時から一部の受信会場では役割者（演者・座長）である治験医師による講演も行われます。演者・座長への謝礼を支払うことはできますか。", options: ["支払うことができる", "支払うことはできない"], answer: 0, explanation: "Web講演会の受信会場であっても、演者・座長等の役割者がいる場合、謝礼を支払うことができます。" },
+              { id: "mq_4", type: "mc", text: "【Q059-1】A大学附属病院と共催で自社医薬品の講演会を開催することになりました。参加対象はA大学附属病院と2つの分院に所属する医師、薬剤師です。医薬品の購入は独立していますが、同一法人に属しています。このような共催講演会を実施することはできるでしょうか。", options: ["実施できる", "実施できない"], answer: 1, explanation: "A大学附属病院と2つの分院は、同一の法人に属していますので、単独の医療機関とみなされます。単独の医療機関を対象とした共催講演会は実施できません。" },
+              { id: "mq_5", type: "mc", text: "【Q059-2】自社医薬品の講演会について、予め趣旨を反映した内容で事前収録を行い、当日に集合会場で講演内容を映写し、引き続いてインターネット通信を利用して同じ演者によるライブでの質疑応答を行う企画です。これを自社医薬品の講演会として懇親行事を含めて開催できますか。", options: ["開催できる", "開催できない"], answer: 0, explanation: "録画による講演の映写であっても、ライブ形式で質疑応答が予定されているため、口頭説明が基本、ライブ形式、双方向のやりとりを満たしているとみなし、開催できます。" },
+              { id: "mq_6", type: "mc", text: "【Q060-1】Aクリニックから忘年会の案内状が届きました。会場は人気のビール園で参加費が2万円です。出席者はクリニック院長他職員など総勢25名です。一般的なパーティープランは3千円〜5千円程度です。このような忘年会に参加してもよいでしょうか。", options: ["参加できる", "参加できない"], answer: 1, explanation: "今回の参加費2万円は、実施場所、内容からみて実費相当額とは判断できないので参加できません。" },
+              { id: "mq_7", type: "mc", text: "【Q060-2】A医院より忘年会の案内状をいただきました。Bホテルにて参加費2万円(二次会費込み)となっています。弊社は一次会のみ参加しようと考えていますが、参加費2万円を支払って参加してもよいでしょうか。", options: ["参加できる", "参加できない"], answer: 1, explanation: "出席しない二次会の費用負担は「実費相当額を超える参加費」とみなされます。一次会と二次会の費用を明記した案内状を新たに作成していただき、一次会の金額が実費相当と確認できれば一次会のみの参加費を支払って参加できます。" },
+              { id: "mq_8", type: "mc", text: "【Q060-3】A医院からの忘年会（参加費1万円は実費相当額）の案内状に、MRは参加費に加えて3千円程度の品物を持参するよう記載がありました。少額な景品類と考え持参できるでしょうか。", options: ["持参できる", "持参できない"], answer: 1, explanation: "MRにのみ物品を要請されている場合は、不当な景品類の提供となり持参できません。参加者全員が平等に妥当な額の物品を持参する場合を除き、医療機関等主催の親睦会合での金品提供は制限されます。" },
+              { id: "mq_9", type: "mc", text: "【Q061-1】医療機関主催の忘年会の案内状に、参加費(実費相当)に加え2千円程度の景品を提供するように書かれています。当社は別の予定があり参加できませんが、景品を提供することはできるでしょうか。", options: ["提供できる", "提供できない"], answer: 1, explanation: "医療機関の親睦会合に参加せずに景品を提供することはできません。名目のいかんを問わず金品を提供することは規約で制限されます。" },
+              { id: "mq_10", type: "mc", text: "【Q061-2】Aクリニックより院内レクリエーション参加の案内がありました。案内状には、ボウリング大会(2千円)、その後に懇親会(5千円)と記載があります。参加費は医師・スタッフと同額であり、それぞれ実費相当額のようです。この行事に参加してもよいでしょうか。", options: ["参加できる", "参加できない"], answer: 0, explanation: "ボウリング、懇親会と複数のイベントが企画されていますが、参加費はそれぞれ実費相当額と判断できるため、当該行事への参加は規約で制限されません。" },
+              { id: "mq_11", type: "mc", text: "【Q061-3】A病院から忘年会（会費1万円・実費相当）の案内がありました。例年、一次会のあと病院職員数名とメーカー数社で二次会に行き、二次会の費用は参加メーカーで均等に負担することになっています。この二次会に参加してもよいでしょうか。", options: ["参加できる", "参加できない"], answer: 1, explanation: "一次会の参加費が実費相当であると確認出来れば一次会には参加できますが、二次会の費用を参加メーカーで負担することはできません。" },
+              { id: "mq_12", type: "mc", text: "【Q062-1】A学会地方会よりプログラム抄録への広告募集の依頼がありました。収支予算書では広告掲載料収入130万円、プログラム抄録作成費80万円となっています。この広告掲載に応じてもよいでしょうか。", options: ["応じてもよい", "応じるべきではない"], answer: 1, explanation: "印刷媒体の場合、広告料収入が媒体作成費用を大幅に上回る場合は、当業界の定める「相応の広告料」には当りませんので、広告掲載の依頼に応じるべきではありません。" },
+              { id: "mq_13", type: "mc", text: "【Q062-2】A病院が地域住民と親睦をはかるため開催する納涼祭（盆踊り、花火、模擬店など）において、地域住民等に配布するパンフレットへの広告依頼がありました。応じてもよいでしょうか。", options: ["応じてもよい", "応じてはならない"], answer: 1, explanation: "遊び、サービスが中心である「まつり」のパンフレットは、本来医療機関が自らの費用で作成、使用するものですので、広告媒体として相応しくありません。" },
+              { id: "mq_14", type: "mc", text: "【Q063-1】A地区医師会の設立30周年記念誌への広告掲載の案内がありました。広告掲載料は1ページ3万円、半ページ2万円です。作成部数200部、作成費用50万円ですが、募集総額、募集数は不明です。この広告掲載募集に応じてもよいでしょうか。", options: ["応じてもよい", "応じることはできない"], answer: 1, explanation: "広告スペースごとの料金・募集数を、広告掲載案内に記載していただき、相応の広告料の範囲内であるかどうか確認する必要があります。現状では応じることはできません。" },
+              { id: "mq_15", type: "mc", text: "【Q063-2】市内のホテルで〇〇市医師会と共催で、複数施設の医療関係者を対象とした、自社医薬品に関連しない「地域包括ケアシステム」をテーマとした講演会を企画しています。このような共催講演会は開催できますか。", options: ["開催でき、茶菓・弁当等も提供可能", "開催できるが、茶菓・弁当・懇親行事等は提供不可", "自社医薬品に関連しないため開催できない"], answer: 1, explanation: "自社医薬品に関連しない医療関連テーマであっても共催の講演会は開催できます。ただし、会合費用以外の景品類である「懇親行事、一般参加者の旅費、贈呈品、茶菓・弁当等」は提供できません。" },
+              { id: "mq_16", type: "mc", text: "【Q063-3】複数の病院の医療担当者約30名を対象に、自社医薬品に関連しないテーマの主催講演会を市内のホテルで開催します。講師謝礼、講師旅費、会場費に加え、茶菓・弁当を提供できますか。", options: ["すべて提供できる", "講師謝礼・旅費・会場費は支払えるが、茶菓・弁当は提供できない", "いずれも支払いや提供ができない"], answer: 1, explanation: "自社医薬品に関連しないテーマの主催講演会ですので、会合費用以外の景品類である茶菓・弁当の提供はできません。会合費用である「講師謝礼、講師旅費、会場費」は支払うことができます。" },
+              { id: "mq_17", type: "mc", text: "【Q064-1】A病院の当直医師に医薬情報活動を行います。夕食時間帯となるため、医薬情報活動に伴う飲食提供として、3千5百円のうな重を持参してもよいでしょうか。", options: ["持参できる", "持参できない"], answer: 1, explanation: "5千円を超えない飲食提供が許容されるのは、院内で相応しい場所や時間を確保できない場合に、喫茶等での活動を許容するものです。夕食時間帯等であっても、医療機関内に弁当を持参したり出前を取ることはできません。" },
+              { id: "mq_18", type: "mc", text: "【Q064-2】A卸の支店長が、Bクリニックの院長をゴルフ接待する際、当社C所長の同伴プレーを求めてきました。院長の費用はすべてA卸が負担し、C所長は自分の費用のみ負担します。同伴してもよいでしょうか。", options: ["同伴できる", "同伴すべきではない"], answer: 1, explanation: "院長から見た場合、ゴルフ接待自体を卸とメーカーの両者から提供を受けたと認識することが想定され、規約違反に問われるおそれがあります。自分の費用のみ負担するとしても同伴すべきではありません。" },
+              { id: "mq_19", type: "mc", text: "【Q064-3】A学会におけるバナー広告の依頼を受けました。紙媒体は作成せず、学会員専用Web上のプログラムにてバナー広告を掲示するものです。広告期間5カ月、掲載料金10万円です。応募できますか。", options: ["応募できる", "応募できない"], answer: 0, explanation: "応募することができます。ただし、学会等におけるバナー広告については、その広告料が、社会通念を大幅に超えるものでない相応の対価であることを確認する必要があります。" },
+              { id: "mq_20", type: "mc", text: "【Q065-1】災害が発生し担当先の多くの医療機関が被災しました。そこで担当先の医療機関等で散乱物の後片付け等、支援活動を行いたいのですが、過大な労務提供として規約違反に問われることはないでしょうか。", options: ["規約違反に問われることはない", "規約違反になるため実施できない"], answer: 0, explanation: "災害復旧のための労務提供は、義援金、見舞金、水等の援助物資と同様、医療用医薬品の取引に付随しないものとして扱うため、規約上の制限を受けません。" },
+              { id: "mq_21", type: "mc", text: "【Q065-2】A大学病院の機関誌（200部発行予定）への広告依頼がありました。広告料募集総額は90万円、媒体作成諸費用は100万円（印刷費90万＋郵送料10万）です。このような広告に応募できるでしょうか。", options: ["応募できる", "応募できない"], answer: 0, explanation: "広告料の総額が媒体作成費用の範囲内であり、個人費用の指標を満たしているなど相応の広告料であると判断できれば応募できます。" },
+              { id: "mq_22", type: "mc", text: "【Q066-1】旭川医科大学病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 1, explanation: "開設者は「国立大学法人」です。法人の職員となるため「みなし公務員」になります。" },
+              { id: "mq_23", type: "mc", text: "【Q066-1】岩手医科大学附属病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 2, explanation: "開設者は「学校法人」です。法人の職員となるため「民間」になります。" },
+              { id: "mq_24", type: "mc", text: "【Q066-1】防衛医科大学校病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 0, explanation: "開設者は「防衛省」です。防衛省の中に配置されており、その職員となるため「公務員（国家公務員）」になります。" },
+              { id: "mq_25", type: "mc", text: "【Q066-1】厚生(医療)農業協同組合連合会 上越総合病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 2, explanation: "開設者は「厚生(医療)農業協同組合連合会」です。その団体の職員となるため「民間」になります。" },
+              { id: "mq_26", type: "mc", text: "【Q066-1】東京警察病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 2, explanation: "開設者は「一般財団法人 自警会」です。その団体の職員となるため「民間」になります。" },
+              { id: "mq_27", type: "mc", text: "【Q066-1】浜松労災病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 1, explanation: "開設者は「独立行政法人 労働者健康安全機構」です。その団体の職員となるため「みなし公務員」になります。" },
+              { id: "mq_28", type: "mc", text: "【Q066-1】ＪＣＨＯ大阪病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 1, explanation: "開設者は「独立行政法人 地域医療機能推進機構」です。その団体の職員となるため「みなし公務員」になります。" },
+              { id: "mq_29", type: "mc", text: "【Q066-1】富山市立富山市民病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 0, explanation: "開設者は「富山市」です。地方自治体の職員となるため「公務員（地方公務員）」になります。" },
+              { id: "mq_30", type: "mc", text: "【Q066-1】川崎市立多摩病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 2, explanation: "開設者は「学校法人 聖マリアンナ医科大学」です。指定管理者制度に基づき同法人が管理・運営しているため、その職員となり「民間」になります。" },
+              { id: "mq_31", type: "mc", text: "【Q066-1】広島市立広島市民病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 1, explanation: "開設者は「一般地方独立行政法人」です。その団体の職員となるため「みなし公務員」になります。" },
+              { id: "mq_32", type: "mc", text: "【Q066-1】済生会松山病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 2, explanation: "開設者は「社会福祉法人 恩賜財団」です。その団体の職員となるため「民間」になります。" },
+              { id: "mq_33", type: "mc", text: "【Q066-1】産業医科大学病院の先生の身分はどれに該当しますか？", options: ["公務員", "みなし公務員", "民間人"], answer: 2, explanation: "開設者は「学校法人 産業医科大学」です。その団体の職員となるため「民間」になります。" },
+              { id: "mq_34", type: "mc", text: "【Q066-2】公立大学法人の医学部附属病院の部長に特別講演を依頼しました。交通便が悪いのでタクシーチケットを提供しようと思います。問題ないでしょうか？", options: ["提供して問題ない", "タクシーチケットは金券扱いなので提供できない", "施設規定で認められていれば、事務方に確認して提供して問題ない"], answer: 2, explanation: "開設者は「公立大学法人」であり「みなし公務員」になります。事業企画申請時において、当該施設の事務方（タクシー利用確認者）に確認し、指定の記載等を行えば提供可能です。" },
+              { id: "mq_35", type: "mc", text: "【Q066-2】国立病院機構の病院の部長に特別講演（1時間）を依頼しました。謝礼はいくら支払うことができますか？（国立病院機構倫理規程に基づく）", options: ["3万円", "4万円（高度な専門性を有する場合は10万円程度も可）", "依頼することはできない"], answer: 1, explanation: "国立病院機構倫理規程では講演料等は1時間当たり4万円程度と記載されていますが、医学等に関する高度な専門性を有する場合は10万円程度の受領が可能となっています。" },
+              { id: "mq_36", type: "mc", text: "【Q066-2】国立病院機構の病院の医師に、自社の社内研修会講師（1時間）を依頼しました。謝礼はいくら支払うことができますか？", options: ["3万円", "4万円", "依頼することはできない"], answer: 2, explanation: "国立病院機構の倫理規程で、職員が営利企業の社員だけのために講演を行うことは、国民の疑惑や不信を招く恐れがあるため、謝礼を受け取って講演を行うことはできません。" },
+              { id: "mq_37", type: "mc", text: "【Q066-3】利害関係者について。製薬企業の社員(MR等)は、国立病院機構の医師等にとって利害関係者に該当しますか？", options: ["該当する", "該当しない"], answer: 0, explanation: "MR等の行為は自社の製品の販売促進等のために病院職員に接触することが多く、病院と契約関係にある医薬品販売業者の利益のための行為（代理行為）を行っていると言わざるを得ないため、利害関係者に該当します。" },
+              { id: "mq_38", type: "mc", text: "【Q066-3】利害関係者について。医師会は、一般的に国立病院機構の病院職員にとって利害関係者に該当しますか？", options: ["該当する", "該当しない"], answer: 1, explanation: "医師会ということをもって直ちに利害関係者に該当するものではありません。委託契約がある場合等を除き、通常は利害関係はないと判断されます。" },
+              { id: "mq_39", type: "mc", text: "【Q066-3】利害関係者について。電気・ガス・水道等の公益事業者、地方自治体等の職員は、国立病院機構の病院職員にとって利害関係者に該当しますか？", options: ["該当する", "該当しない（ただし契約事務担当職員にとっては該当する場合がある）"], answer: 1, explanation: "電気・ガス・水道等は価格設定等に裁量の余地がほとんどないため除外されています。その他の地方自治体等の職員も直ちに該当しませんが、契約等がある場合は契約担当職員にとって利害関係者になります。" },
+              { id: "mq_40", type: "mc", text: "【Q066-3】利害関係者について。マスコミ（新聞記者、放送関係者など）は、国立病院機構の病院職員にとって利害関係者に該当しますか？", options: ["該当する", "該当しない（ただし広告契約等がある場合は契約担当職員にとって該当）"], answer: 1, explanation: "一般にマスコミとの間には契約等利害関係者につながる関係がないと考えられるため該当しません。ただし広告の契約等がある場合は、契約担当職員の利害関係者として取り扱います。" },
+              { id: "mq_41", type: "mc", text: "【Q066-3】国立病院機構の病院の外科系診療科全体で、昼休み（12:15〜12:45）に製品説明会を実施します。食事時間帯のため、弁当を提供してもよいでしょうか。", options: ["職務内とみなされ、提供できる", "職務外とみなされるため、提供できない"], answer: 1, explanation: "昼休み（休憩時間）は職務外となるため、利害関係者から無償で弁当の提供を受けることは禁止行為となります。" },
+              { id: "mq_42", type: "mc", text: "【Q066-3】国立病院機構の病院の部長が、職務外で参加する学会において、ランチョンセミナーで弁当を配布された場合、受け取ることができるでしょうか。", options: ["受け取ることができる", "受け取ることはできない"], answer: 1, explanation: "職務外で学会に参加する場合、利害関係者から提供される弁当を受け取ることは出来ません。自己の費用を負担して飲食することになります。" },
+              { id: "mq_43", type: "mc", text: "【Q066-3】国立病院機構の病院の部長が、製薬会社主催の講演会に演者（役割者）として参加しました。講演会終了後、懇親会（立食形式：約30名）に出席できるでしょうか。", options: ["出席できる", "出席できない"], answer: 0, explanation: "講演会終了後に多数の者が出席する（20人以上）立食パーティーにおいて利害関係者から飲食物の提供を受けることは、倫理規程上、例外として認められています。" },
+              { id: "mq_44", type: "mc", text: "【Q067-1】団体性が認められるA研究会（学術集会と機関誌を発行）から寄附要請がありました。予算書では個人費用50万円、施設年会費90万円と記載があります。寄附要請に応じてよいでしょうか。", options: ["応じることができる", "応じることはできない"], answer: 0, explanation: "施設年会費で個人費用が賄われていると判断できる（個人費用の指標を満たしている）ため、寄附金を拠出することが出来ます。" },
+              { id: "mq_45", type: "mc", text: "【Q067-2】NPO法人の理事であるA先生から寄附を依頼されました。この法人の活動内容は、B病院の受診勧誘に特化したものです。予算書で個人費用に問題はありません。このNPO法人へ寄附できますか。", options: ["寄附できる", "寄附できない"], answer: 1, explanation: "活動内容が特定の病院の受診勧誘に特化しており、実質的にB病院の通常の医療業務に対する金銭提供となるため、規約で制限され寄附できません。" }
             ]
           }
         }
@@ -820,9 +870,24 @@
 
       const startStudy = (questions, title) => {
         if (!questions?.length) return showToast("問題がありません。", "error");
-        const initialIndex = questions.findIndex(q => userProgress.completed[q.id] === undefined) || 0;
+        
+        // findIndex が見つからない場合は 0 とする。
+        let initialIndex = questions.findIndex(q => userProgress.completed[q.id] === undefined);
+        if (initialIndex === -1) initialIndex = 0;
+        
+        // 常に「10問ブロックの最初」から表示する。
         const blockStart = Math.floor(initialIndex / 10) * 10;
-        setStudySession({ mode: "practice", questions, title, currentIndex: initialIndex, blockStartIndex: blockStart, blockAnswers: {}, blockCompleted: false, totalFinished: false });
+        
+        setStudySession({ 
+          mode: "practice", 
+          questions, 
+          title, 
+          currentIndex: blockStart, 
+          blockStartIndex: blockStart, 
+          blockAnswers: {}, 
+          blockCompleted: false, 
+          totalFinished: false 
+        });
         setActiveTab("study");
       };
 
@@ -832,9 +897,8 @@
         const updated = { ...userProgress, completed: { ...userProgress.completed, [qId]: isCorrect } };
         setUserProgress(updated);
         saveProgress(updated);
-        const relativeIndex = studySession.currentIndex - studySession.blockStartIndex;
-        const isBlockEnd = relativeIndex === 9 || studySession.currentIndex === studySession.questions.length - 1;
-        setStudySession({ ...studySession, blockAnswers: newBlockAnswers, blockCompleted: isBlockEnd });
+        // ここで blockCompleted にせず、解説表示後の「次へ」ボタン押下時に判定する
+        setStudySession({ ...studySession, blockAnswers: newBlockAnswers });
       };
 
       const toggleBookmark = (qId) => {
@@ -881,7 +945,23 @@
                   <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div className="bg-slate-50 p-4 rounded-xl border border-slate-100"><div className="text-slate-500 text-xs font-bold mb-1">全体の進捗率</div><div className="text-2xl font-black text-brand-600">{stats.percentage}%</div></div>
                     <div className="bg-slate-50 p-4 rounded-xl border border-slate-100"><div className="text-slate-500 text-xs font-bold mb-1">正解した問題</div><div className="text-2xl font-black text-slate-800">{stats.solvedCorrect} <span className="text-sm text-slate-400">/ {stats.total}</span></div></div>
-                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100"><div className="text-slate-500 text-xs font-bold mb-1">付箋 (ブックマーク)</div><div className="text-2xl font-black text-amber-500">{stats.bookmarkedCount}</div></div>
+                    <div className="bg-slate-50 p-4 rounded-xl border border-slate-100 flex flex-col justify-between">
+                      <div>
+                        <div className="text-slate-500 text-xs font-bold mb-1">付箋 (ブックマーク)</div>
+                        <div className="text-2xl font-black text-amber-500">{stats.bookmarkedCount}</div>
+                      </div>
+                      {stats.bookmarkedCount > 0 && (
+                        <button 
+                          onClick={() => {
+                            const bookmarkedQuestions = allQuestionsList.filter(q => userProgress.bookmarks[q.id]);
+                            startStudy(bookmarkedQuestions, "付箋を付けた問題");
+                          }}
+                          className="mt-2 bg-amber-100 text-amber-700 hover:bg-amber-200 text-xs font-bold py-2 px-3 rounded-lg transition text-center w-full"
+                        >
+                          付箋の問題を解く
+                        </button>
+                      )}
+                    </div>
                   </div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -908,97 +988,188 @@
                 <div className="animation-slide-up w-full max-w-3xl mx-auto flex flex-col flex-grow">
                   <div className="flex justify-between items-center mb-6">
                     <h2 className="text-lg font-bold text-slate-800">{studySession.title}</h2>
-                    <div className="text-sm font-semibold bg-slate-200 px-3 py-1 rounded-full text-slate-700">{studySession.currentIndex + 1} / {studySession.questions.length}</div>
+                    <div className="flex items-center space-x-3">
+                      <select 
+                        className="bg-white border border-slate-300 text-slate-700 text-sm font-semibold rounded-lg px-2 py-1 outline-none focus:ring-2 focus:ring-brand-500 cursor-pointer"
+                        value={studySession.blockStartIndex}
+                        onChange={(e) => {
+                          const newStart = parseInt(e.target.value, 10);
+                          setStudySession({
+                            ...studySession,
+                            currentIndex: newStart,
+                            blockStartIndex: newStart,
+                            blockAnswers: {},
+                            blockCompleted: false,
+                            totalFinished: false
+                          });
+                        }}
+                      >
+                        {Array.from({ length: Math.ceil(studySession.questions.length / 10) }).map((_, i) => {
+                          const startQ = i * 10 + 1;
+                          const endQ = Math.min((i + 1) * 10, studySession.questions.length);
+                          return (
+                            <option key={i} value={i * 10}>Q{startQ}〜Q{endQ}</option>
+                          );
+                        })}
+                      </select>
+                      <div className="text-sm font-semibold bg-slate-200 px-3 py-1 rounded-full text-slate-700">
+                        {studySession.currentIndex + 1} / {studySession.questions.length}
+                      </div>
+                    </div>
                   </div>
+                  
                   {studySession.totalFinished ? (
-                    <div className="bg-white rounded-2xl p-8 text-center flex-grow flex flex-col items-center justify-center border border-slate-200">
-                      <div className="w-16 h-16 bg-brand-100 rounded-full flex items-center justify-center mb-4"><Icon name="check-circle" className="w-8 h-8 text-brand-600" /></div>
-                      <h3 className="text-2xl font-black mb-2">全問完了！</h3><p className="text-slate-600 mb-8">お疲れ様でした。</p>
-                      <button onClick={() => { setStudySession(null); setActiveTab("dashboard"); }} className="px-6 py-3 bg-slate-800 hover:bg-slate-900 text-white font-bold rounded-xl shadow-lg">ダッシュボードに戻る</button>
+                    <div className="bg-white rounded-2xl p-8 text-center flex-grow flex flex-col justify-center items-center">
+                      <div className="w-20 h-20 bg-brand-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <Icon name="award" className="w-10 h-10 text-brand-500" />
+                      </div>
+                      <h3 className="text-2xl font-black text-slate-800 mb-2">お疲れ様でした！</h3>
+                      <p className="text-slate-500 mb-8 font-medium">このカテゴリーのすべての問題を解き終わりました。</p>
+                      <button onClick={() => { setStudySession(null); setActiveTab("dashboard"); }} className="bg-slate-900 text-white font-bold py-4 px-8 rounded-xl shadow-xl hover:bg-slate-800 transition">
+                        ダッシュボードに戻る
+                      </button>
                     </div>
                   ) : studySession.blockCompleted ? (
-                    <div className="bg-white rounded-2xl p-8 text-center flex-grow flex flex-col items-center justify-center border border-slate-200">
-                      <h3 className="text-xl font-bold mb-6">10問ブロック完了</h3>
-                      <div className="flex space-x-4 mb-8">
+                    <div className="bg-white rounded-2xl p-8 text-center flex-grow flex flex-col justify-center items-center shadow-sm border border-slate-200">
+                      <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <Icon name="check-circle" className="w-8 h-8 text-emerald-500" />
+                      </div>
+                      <h3 className="text-xl font-bold text-slate-800 mb-2">10問ブロック完了！</h3>
+                      <p className="text-slate-500 text-sm mb-8">お疲れ様です。少し休憩して次へ進みましょう。</p>
+                      <div className="flex space-x-4 w-full max-w-sm mx-auto">
+                        <button onClick={() => { setStudySession(null); setActiveTab("dashboard"); }} className="flex-1 py-3 bg-slate-100 text-slate-700 font-bold rounded-xl hover:bg-slate-200 transition">戻る</button>
                         <button onClick={() => {
-                          const clr = { ...userProgress.completed };
-                          studySession.questions.slice(studySession.blockStartIndex, studySession.blockStartIndex + 10).forEach(q => delete clr[q.id]);
-                          setUserProgress({ ...userProgress, completed: clr });
-                          setStudySession({ ...studySession, currentIndex: studySession.blockStartIndex, blockAnswers: {}, blockCompleted: false });
-                        }} className="px-5 py-2.5 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl">やり直す</button>
-                        <button onClick={() => {
-                          const n = studySession.blockStartIndex + 10;
-                          setStudySession(n < studySession.questions.length ? { ...studySession, blockStartIndex: n, currentIndex: n, blockAnswers: {}, blockCompleted: false } : { ...studySession, totalFinished: true });
-                        }} className="px-5 py-2.5 bg-brand-600 hover:bg-brand-700 text-white font-bold rounded-xl shadow-lg">次の10問へ</button>
+                          const nextStart = studySession.currentIndex + 1;
+                          if (nextStart >= studySession.questions.length) {
+                            setStudySession({ ...studySession, totalFinished: true });
+                          } else {
+                            setStudySession({ ...studySession, currentIndex: nextStart, blockStartIndex: nextStart, blockAnswers: {}, blockCompleted: false });
+                          }
+                        }} className="flex-1 py-3 bg-brand-600 text-white font-bold rounded-xl shadow-lg hover:bg-brand-500 transition">次の10問へ</button>
                       </div>
                     </div>
-                  ) : (
-                    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 flex-grow flex flex-col overflow-hidden">
-                      <div className="p-5 border-b border-slate-100 bg-slate-50 flex justify-between items-start">
-                        <div className="flex-1">
-                          <span className="inline-block px-2.5 py-1 bg-brand-100 text-brand-700 font-bold text-[10px] rounded mb-3 tracking-wider">Q{studySession.currentIndex + 1}</span>
-                          <h3 className="text-base sm:text-lg font-bold text-slate-800 leading-relaxed pr-4">{currentQ.text}</h3>
+                  ) : currentQ ? (
+                    <div className="bg-white rounded-2xl shadow-sm border border-slate-200 flex-grow flex flex-col relative overflow-hidden">
+                      <div className="absolute top-0 left-0 w-full h-1 bg-slate-100">
+                        <div className="h-full bg-brand-500 transition-all duration-300" style={{ width: `${((studySession.currentIndex % 10) + (currentAnswer ? 1 : 0)) / 10 * 100}%` }}></div>
+                      </div>
+                      
+                      <div className="p-6 sm:p-8 flex-grow">
+                        <div className="flex justify-between items-start mb-6">
+                          <span className="bg-slate-100 text-slate-600 text-xs font-bold px-3 py-1 rounded-lg">Q{studySession.currentIndex + 1}</span>
+                          <button onClick={() => toggleBookmark(currentQ.id)} className={`p-2 rounded-full transition ${userProgress.bookmarks[currentQ.id] ? 'bg-amber-100 text-amber-500' : 'bg-slate-50 text-slate-300 hover:bg-slate-100 hover:text-slate-400'}`}>
+                            <Icon name="bookmark" className={`w-5 h-5 ${userProgress.bookmarks[currentQ.id] ? 'fill-current' : ''}`} />
+                          </button>
                         </div>
-                        <button onClick={() => toggleBookmark(currentQ.id)} className={`p-2 rounded-xl ${userProgress.bookmarks[currentQ.id] ? 'bg-amber-100 text-amber-500' : 'bg-slate-100 text-slate-400'}`}>
-                          <Icon name="bookmark" className={`w-5 h-5 ${userProgress.bookmarks[currentQ.id] ? 'fill-current' : ''}`} />
-                        </button>
+                        
+                        <h3 className="text-lg sm:text-xl font-bold text-slate-800 leading-relaxed mb-8">{currentQ.text}</h3>
+
+                        <div className="space-y-3">
+                          {currentQ.type === 'tf' ? (
+                            <div className="flex space-x-4">
+                              {[true, false].map(val => {
+                                const isSelected = currentAnswer?.ans === val;
+                                const showCorrect = currentAnswer && currentQ.answer === val;
+                                const showWrong = isSelected && !currentAnswer.isCorrect;
+                                
+                                return (
+                                  <button
+                                    key={val.toString()}
+                                    disabled={!!currentAnswer}
+                                    onClick={() => handleAnswerQuestion(currentQ.id, currentQ.answer === val, val)}
+                                    className={`flex-1 py-4 rounded-xl font-bold text-lg transition border-2 flex items-center justify-center space-x-2
+                                      ${!currentAnswer ? 'bg-white border-slate-200 text-slate-600 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700' : ''}
+                                      ${showCorrect ? 'bg-emerald-50 border-emerald-500 text-emerald-700' : ''}
+                                      ${showWrong ? 'bg-red-50 border-red-500 text-red-700' : ''}
+                                      ${currentAnswer && !showCorrect && !showWrong ? 'bg-slate-50 border-slate-100 text-slate-400 opacity-50' : ''}
+                                    `}
+                                  >
+                                    <span>{val ? '〇 (正しい)' : '× (誤り)'}</span>
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          ) : (
+                            <div className="space-y-3">
+                              {currentQ.statements && (
+                                <div className="mb-6 bg-slate-50 p-5 rounded-xl text-sm sm:text-base text-slate-800 space-y-2 border border-slate-200 shadow-sm font-medium">
+                                  {currentQ.statements.map((s, i) => (
+                                    <p key={i} className="leading-relaxed whitespace-pre-wrap">{s}</p>
+                                  ))}
+                                </div>
+                              )}
+                              {currentQ.options.map((opt, idx) => {
+                                const isSelected = currentAnswer?.ans === idx;
+                                const showCorrect = currentAnswer && currentQ.answer === idx;
+                                const showWrong = isSelected && !currentAnswer.isCorrect;
+
+                                return (
+                                  <button
+                                    key={idx}
+                                    disabled={!!currentAnswer}
+                                    onClick={() => handleAnswerQuestion(currentQ.id, currentQ.answer === idx, idx)}
+                                    className={`w-full text-left p-4 rounded-xl font-medium transition border-2 flex items-start space-x-3
+                                      ${!currentAnswer ? 'bg-white border-slate-200 text-slate-700 hover:border-brand-300 hover:bg-brand-50 hover:text-brand-700' : ''}
+                                      ${showCorrect ? 'bg-emerald-50 border-emerald-500 text-emerald-800' : ''}
+                                      ${showWrong ? 'bg-red-50 border-red-500 text-red-800' : ''}
+                                      ${currentAnswer && !showCorrect && !showWrong ? 'bg-slate-50 border-slate-100 text-slate-400 opacity-50' : ''}
+                                    `}
+                                  >
+                                    <span className={`flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center text-xs font-bold mt-0.5
+                                      ${showCorrect ? 'bg-emerald-500 border-emerald-500 text-white' : showWrong ? 'bg-red-500 border-red-500 text-white' : 'border-slate-300 text-slate-500'}
+                                    `}>
+                                      {showCorrect ? <Icon name="check" className="w-4 h-4" /> : showWrong ? <Icon name="x" className="w-4 h-4" /> : idx + 1}
+                                    </span>
+                                    <span className="leading-tight pt-0.5">{opt}</span>
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          )}
+                        </div>
                       </div>
-                      <div className="p-5 flex-grow flex flex-col">
-                        {currentQ.type === 'tf' ? (
-                          <div className="flex flex-col space-y-3 mt-2">
-                            {[true, false].map(val => (
-                              <button key={String(val)} disabled={!!currentAnswer} onClick={() => handleAnswerQuestion(currentQ.id, currentQ.answer === val, val)}
-                                className={`p-4 rounded-xl border-2 font-bold text-lg flex justify-center space-x-2 ${currentAnswer ? (currentQ.answer === val ? 'border-brand-500 bg-brand-50 text-brand-700' : (currentAnswer.ans === val ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 opacity-50')) : 'border-slate-200 hover:bg-slate-50 text-slate-700'}`}>
-                                <span>{val ? '○ 正しい' : '× 誤り'}</span>
-                                {currentAnswer && currentQ.answer === val && <Icon name="check-circle" className="w-5 h-5" />}
-                                {currentAnswer && currentQ.answer !== val && currentAnswer.ans === val && <Icon name="x-circle" className="w-5 h-5" />}
-                              </button>
-                            ))}
-                          </div>
-                        ) : (
-                          <div className="flex flex-col space-y-2 mt-2">
-                            {currentQ.statements && <div className="mb-4 bg-slate-50 p-4 rounded-xl text-sm text-slate-700 space-y-1.5">{currentQ.statements.map((s, i) => <p key={i}>{s}</p>)}</div>}
-                            {currentQ.options.map((opt, idx) => {
-                              const isCorr = currentQ.answer === idx, isSel = currentAnswer?.ans === idx;
-                              return (
-                                <button key={idx} disabled={!!currentAnswer} onClick={() => handleAnswerQuestion(currentQ.id, isCorr, idx)}
-                                  className={`p-3 sm:p-4 rounded-xl border-2 text-left flex space-x-3 ${currentAnswer ? (isCorr ? 'border-brand-500 bg-brand-50 text-brand-700' : (isSel ? 'border-red-500 bg-red-50 text-red-700' : 'border-slate-200 opacity-50')) : 'border-slate-200 hover:bg-slate-50 text-slate-700'}`}>
-                                  <span className="w-6 h-6 rounded-full border border-slate-300 flex items-center justify-center text-xs font-bold mt-0.5">{idx + 1}</span><span className="flex-grow pt-0.5">{opt}</span>
-                                  {currentAnswer && isCorr && <Icon name="check-circle" className="w-5 h-5 text-brand-600" />}
-                                  {currentAnswer && !isCorr && isSel && <Icon name="x-circle" className="w-5 h-5 text-red-500" />}
-                                </button>
-                              );
-                            })}
-                          </div>
-                        )}
-                      </div>
+
                       {currentAnswer && (
-                        <div className="p-5 bg-slate-50 border-t border-slate-100 animation-slide-up">
-                          <div className={`inline-flex items-center space-x-1.5 px-3 py-1 rounded-full text-xs font-bold mb-3 ${currentAnswer.isCorrect ? 'bg-brand-100 text-brand-700' : 'bg-red-100 text-red-700'}`}>
-                            <Icon name={currentAnswer.isCorrect ? 'check' : 'x'} className="w-3.5 h-3.5" /><span>{currentAnswer.isCorrect ? '正解！' : '不正解...'}</span>
+                        <div className="bg-slate-50 p-6 border-t border-slate-100 animation-slide-up">
+                          <div className="flex items-center space-x-2 mb-3">
+                            {currentAnswer.isCorrect ? <span className="bg-emerald-100 text-emerald-700 text-xs font-bold px-2 py-1 rounded">正解</span> : <span className="bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded">不正解</span>}
+                            <span className="text-sm font-bold text-slate-700">解説</span>
                           </div>
-                          {currentQ.explanation && <div className="text-sm text-slate-700 bg-white p-4 rounded-xl border border-slate-200"><span className="text-brand-600 font-extrabold mr-2">解説:</span>{currentQ.explanation}</div>}
-                          <div className="mt-6 flex justify-between">
-                            <button onClick={() => setStudySession({ ...studySession, currentIndex: studySession.currentIndex - 1 })} disabled={studySession.currentIndex === studySession.blockStartIndex} className="px-4 py-2 text-sm font-semibold text-slate-500 hover:text-slate-800 disabled:opacity-30 flex items-center"><Icon name="chevron-left" className="w-4 h-4 mr-1" /> 前へ</button>
-                            <button onClick={() => setStudySession({ ...studySession, currentIndex: studySession.currentIndex + 1, totalFinished: studySession.currentIndex === studySession.questions.length - 1 })} className="px-6 py-2.5 bg-slate-800 text-white font-bold rounded-xl flex items-center">次へ <Icon name="chevron-right" className="w-4 h-4 ml-1" /></button>
-                          </div>
+                          <p className="text-slate-600 text-sm leading-relaxed mb-6">{currentQ.explanation || "（解説なし）"}</p>
+                          <button onClick={() => {
+                            const relativeIndex = studySession.currentIndex - studySession.blockStartIndex;
+                            const isBlockEnd = relativeIndex === 9 || studySession.currentIndex === studySession.questions.length - 1;
+                            
+                            if (isBlockEnd) {
+                              if (studySession.currentIndex >= studySession.questions.length - 1) {
+                                setStudySession({ ...studySession, totalFinished: true });
+                              } else {
+                                setStudySession({ ...studySession, blockCompleted: true });
+                              }
+                            } else {
+                              setStudySession({ ...studySession, currentIndex: studySession.currentIndex + 1 });
+                            }
+                          }} className="w-full py-4 bg-slate-900 text-white font-bold rounded-xl shadow-lg hover:bg-slate-800 transition">
+                            次へ進む
+                          </button>
                         </div>
                       )}
                     </div>
-                  )}
+                  ) : null}
                 </div>
               )
             )}
           </main>
 
           {showUserModal && (
-            <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/40 backdrop-blur-sm animation-fade-in">
-              <div className="bg-white rounded-2xl shadow-2xl w-full max-w-sm overflow-hidden animation-slide-up">
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">ユーザー設定</h3>
-                  <p className="text-xs text-slate-500 mb-6">進捗を保存・同期するためのユーザー名を入力してください。</p>
+            <div className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-50 flex items-center justify-center p-4 animation-fade-in">
+              <div className="bg-white rounded-3xl shadow-2xl w-full max-w-sm overflow-hidden">
+                <div className="p-6 sm:p-8">
+                  <div className="w-12 h-12 bg-brand-100 rounded-full flex items-center justify-center mb-4"><Icon name="users" className="w-6 h-6 text-brand-600" /></div>
+                  <h3 className="text-xl font-bold text-slate-800 mb-2">ユーザー設定</h3>
+                  <p className="text-sm text-slate-500 mb-6 leading-relaxed">学習データを共有・同期するために、お名前（ニックネーム可）を入力してください。</p>
                   <form onSubmit={handleLogin}>
-                    <input type="text" value={inputName} onChange={(e) => setInputName(e.target.value)} placeholder="例：山田 太郎" className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-brand-500 mb-6 font-medium" autoFocus />
+                    <input type="text" value={inputName} onChange={(e) => setInputName(e.target.value)} placeholder="例: Yamada" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 outline-none transition placeholder:text-slate-300 focus:ring-2 focus:ring-brand-500 mb-6 font-medium" autoFocus />
                     <div className="flex space-x-3">
                       <button type="button" onClick={() => setShowUserModal(false)} className="flex-1 py-3 bg-slate-100 text-slate-700 font-bold rounded-xl">キャンセル</button>
                       <button type="submit" className="flex-1 py-3 bg-brand-600 text-white font-bold rounded-xl shadow-lg">決定・同期</button>
@@ -1013,14 +1184,17 @@
           {toast && (
             <div className="fixed bottom-6 right-6 z-50 animation-slide-up">
               <div className={`px-5 py-3 rounded-xl shadow-xl flex items-center space-x-3 text-white font-medium text-sm ${toast.type === 'error' ? 'bg-red-600' : toast.type === 'info' ? 'bg-slate-800' : 'bg-brand-600'}`}>
-                <Icon name={toast.type === 'error' ? 'alert-circle' : toast.type === 'info' ? 'info' : 'check-circle'} className="w-5 h-5" /><span>{toast.message}</span>
+                <Icon name={toast.type === 'error' ? 'alert-circle' : toast.type === 'info' ? 'info' : 'check-circle'} className="w-5 h-5" />
+                <span>{toast.message}</span>
               </div>
             </div>
           )}
         </div>
       );
     }
-    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
   </script>
 </body>
 </html>
